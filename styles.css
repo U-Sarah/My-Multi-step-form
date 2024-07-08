@@ -1,0 +1,356 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: hsl(217, 100%, 97%);
+}
+main {
+  margin: 100px auto;
+  width: 733px;
+  display: flex;
+  gap: 50px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px 75px 12px 12px;
+}
+.left-section {
+  background: url(./assets/images/bg-sidebar-desktop.svg);
+  background-size: cover;
+  height: 510px;
+  width: 230px;
+  padding: 25px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.steps {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.steps h3,
+.steps h5 {
+  color: white;
+  margin: 0;
+  font-weight: normal;
+  font-size: 0.82em;
+}
+h6 {
+  font-size: 0.82em;
+  color: hsl(231, 11%, 63%);
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.steps h3 {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 50%;
+  padding: 5px;
+  line-height: 19px;
+  width: 19px;
+  height: 19px;
+  text-align: center;
+}
+.active h3 {
+  background-color: hsl(206, 94%, 87%);
+  color: black;
+  font-weight: 900;
+}
+.info {
+  margin: 30px;
+}
+h1 {
+  color: hsl(213, 96%, 18%);
+  margin: 0;
+}
+p {
+  color: hsl(231, 11%, 63%);
+  margin: 12px 0 30px;
+  font-size: 14px;
+  /* width: 440px; */
+}
+.form {
+  margin-top: 20px;
+  /* padding: 20px; */
+}
+label {
+  color: hsl(213, 96%, 18%);
+  display: inline-block;
+  margin-bottom: 8px;
+}
+input {
+  /* display: block; */
+  margin-bottom: 10px;
+  outline: none;
+  border: 1px solid hsl(229, 24%, 87%);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  /* height: 40px; */
+  font-size: 14px;
+  border-radius: 5px;
+}
+.input-container {
+  position: relative;
+}
+.input-container span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  display: none;
+}
+.error {
+  border: 1px solid red;
+}
+.error + span {
+  display: block;
+}
+.input-1:focus {
+  border: 1px solid hsl(243, 100%, 62%);
+}
+button {
+  border-radius: 7px;
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  padding: 14px;
+  width: 100px;
+  margin-top: 40px;
+  float: right;
+}
+
+/* step 2 */
+.plan {
+  margin-top: 30px;
+}
+.plan p {
+  margin-top: 10px;
+}
+.card-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 50px;
+}
+.card {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  width: 140px;
+  height: 160px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.card h4 {
+  margin-bottom: 5px;
+  margin-top: 43px;
+}
+.card p {
+  margin: 0;
+  font-size: 12px;
+}
+.card:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.free-text {
+  color: hsl(213, 96%, 18%);
+  font-size: 12px;
+}
+/* toggler */
+#toggle {
+  display: none;
+}
+.toggle-bar label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: hsl(213, 96%, 18%);
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  /* margin-left: 32px; */
+}
+.toggle-bar label::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#toggle:checked + label {
+  background-color: hsl(213, 96%, 18%);
+}
+#toggle:checked + label::before {
+  transform: translateX(20px);
+}
+.toggle-menu {
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(231, 100%, 99%);
+  border-radius: 10px;
+  width: 450px;
+  padding: 15px;
+}
+.focus {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+.toggle-menu p {
+  margin: 0;
+}
+.active-p {
+  color: hsl(213, 96%, 18%);
+  font-weight: bolder;
+}
+.link {
+  display: flex;
+  justify-content: space-between;
+}
+.previous {
+  color: hsl(231, 11%, 63%);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+.previous:hover {
+  color: hsl(213, 96%, 18%);
+}
+/* step3 */
+.add-ons {
+  margin-top: 30px;
+}
+.checkbox-container {
+  margin-top: 35px;
+}
+.checkbox-main {
+  display: flex;
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 10px;
+  justify-content: space-between;
+  width: 450px;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.checkbox-main:hover {
+  border-color: hsl(243, 100%, 62%);
+}
+.features {
+  display: flex;
+  gap: 15px;
+}
+#checkbox {
+  width: 20px;
+}
+.details h3,
+p {
+  margin: 0;
+}
+.add-ons p {
+  margin-top: 5px;
+}
+.details {
+  margin-top: 5px;
+}
+.hover {
+  border: 1px solid hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+.price h4 {
+  color: hsl(243, 100%, 62%);
+}
+
+/* step-4 */
+.summary {
+  margin-top: 30px;
+}
+.summary p {
+  margin-top: 10px;
+}
+.confirmation-container {
+  background-color: hsl(231, 100%, 99%);
+  padding: 25px;
+  width: 450px;
+  border-radius: 10px;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.summary-container {
+  display: flex;
+  justify-content: space-between;
+}
+.monthly-check {
+  margin-bottom: 15px;
+}
+.monthly-check h3 {
+  margin: 0;
+}
+.monthly-check p {
+  margin: 0;
+  text-decoration: underline;
+}
+.in-focus:hover {
+  color: hsl(243, 100%, 62%);
+}
+hr {
+  border: 1px solid hsl(229, 24%, 87%);
+}
+.preference {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.preference h4 {
+  margin: 0;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.total h2 {
+  margin: 0;
+  margin-top: 5px;
+}
+.active-item h2 {
+  color: hsl(243, 100%, 62%);
+}
+.open h3 {
+  color: hsl(213, 96%, 18%);
+}
+.on h4 {
+  color: hsla(213, 96%, 18%, 70%);
+}
+.confirm-button {
+  background-color: hsl(243, 100%, 62%);
+  border: none;
+}
+
+/* step5 */
+.success {
+  text-align: center;
+  width: 300px;
+  height: fit-content;
+  /* padding: 30px; */
+  margin: 150px auto;
+  box-sizing: border-box;
+}
+.success img {
+  margin-bottom: 20px;
+}
+.success h1 {
+  margin-bottom: 10px;
+}
+.success p {
+  width: 450px;
+  font-size: 16px;
+  line-height: 1.4;
+  margin-left: -65px;
+}
