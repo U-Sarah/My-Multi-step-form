@@ -2,15 +2,34 @@ function changePage(pageNumber) {
   //if pageNumber is 4 display success and return
   if (pageNumber === 1) {
     let error = false;
-    document.querySelectorAll(".input-1").forEach((elem) => checkError(elem));
+    const inputs = document.querySelectorAll(".input-1");
+
+    inputs.forEach((elem) => {
+      checkError(elem);
+      elem.addEventListener("input", removeErrorOnInput);
+    });
 
     function checkError(params) {
-      if (params.value.trim() === "") {
+      if (params.type === "email" && !isValidEmail(params.value.trim())) {
         params.classList.add("error");
-
+        error = true;
+      } else if (params.value.trim() === "") {
+        params.classList.add("error");
         error = true;
       } else {
         params.classList.remove("error");
+      }
+    }
+    function isValidEmail(email) {
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailPattern.test(email);
+    }
+
+    function removeErrorOnInput(event) {
+      if (event.target.type === "email" && isValidEmail(event.target.trim())) {
+        event.target.classList.remove("error");
+      } else if (event.target.value.trim() != "") {
+        event.target.classList.remove("error");
       }
     }
 
